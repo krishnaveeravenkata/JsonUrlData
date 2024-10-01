@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Comments</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Comments</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Post ID</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Body</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="comment : ${comments}">
+                <td th:text="${comment.postId}"></td>
+                <td th:text="${comment.id}"></td>
+                <td th:text="${comment.name}"></td>
+                <td th:text="${comment.email}"></td>
+                <td th:text="${comment.body}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
